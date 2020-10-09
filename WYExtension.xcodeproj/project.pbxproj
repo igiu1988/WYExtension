@@ -16,6 +16,11 @@
 		159F70CA2530147E00AB28F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70C92530147E00AB28F8 /* main.m */; };
 		159F70D42530147E00AB28F8 /* WYExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70D32530147E00AB28F8 /* WYExtensionTests.m */; };
 		159F70DF2530147F00AB28F8 /* WYExtensionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70DE2530147F00AB28F8 /* WYExtensionUITests.m */; };
+		159F70F4253014C500AB28F8 /* WYPopupBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70EF253014C500AB28F8 /* WYPopupBgView.m */; };
+		159F70F5253014C500AB28F8 /* APLPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70F0253014C500AB28F8 /* APLPopupAnimation.m */; };
+		159F70F6253014C500AB28F8 /* APLPopupTapStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70F1253014C500AB28F8 /* APLPopupTapStrategy.m */; };
+		159F70FA2530171700AB28F8 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70F92530171700AB28F8 /* UIView+Layout.m */; };
+		159F70FD2530192700AB28F8 /* WYPopupDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 159F70FC2530192700AB28F8 /* WYPopupDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,16 @@
 		159F70DA2530147E00AB28F8 /* WYExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYExtensionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		159F70DE2530147F00AB28F8 /* WYExtensionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYExtensionUITests.m; sourceTree = "<group>"; };
 		159F70E02530147F00AB28F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		159F70EE253014C500AB28F8 /* WYPopupTapStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopupTapStrategy.h; sourceTree = "<group>"; };
+		159F70EF253014C500AB28F8 /* WYPopupBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopupBgView.m; sourceTree = "<group>"; };
+		159F70F0253014C500AB28F8 /* APLPopupAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPopupAnimation.m; sourceTree = "<group>"; };
+		159F70F1253014C500AB28F8 /* APLPopupTapStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPopupTapStrategy.m; sourceTree = "<group>"; };
+		159F70F2253014C500AB28F8 /* WYPopupAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopupAnimation.h; sourceTree = "<group>"; };
+		159F70F3253014C500AB28F8 /* WYPopupBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopupBgView.h; sourceTree = "<group>"; };
+		159F70F82530171600AB28F8 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		159F70F92530171700AB28F8 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		159F70FB2530192700AB28F8 /* WYPopupDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPopupDemo.h; sourceTree = "<group>"; };
+		159F70FC2530192700AB28F8 /* WYPopupDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYPopupDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +99,8 @@
 		159F70AB2530147D00AB28F8 = {
 			isa = PBXGroup;
 			children = (
+				159F70F7253016FE00AB28F8 /* ExtensionCommon */,
+				159F70EC2530149800AB28F8 /* ExtensionCore */,
 				159F70B62530147D00AB28F8 /* WYExtension */,
 				159F70D22530147E00AB28F8 /* WYExtensionTests */,
 				159F70DD2530147F00AB28F8 /* WYExtensionUITests */,
@@ -135,6 +152,38 @@
 				159F70E02530147F00AB28F8 /* Info.plist */,
 			);
 			path = WYExtensionUITests;
+			sourceTree = "<group>";
+		};
+		159F70EC2530149800AB28F8 /* ExtensionCore */ = {
+			isa = PBXGroup;
+			children = (
+				159F70ED253014C500AB28F8 /* Popup */,
+			);
+			path = ExtensionCore;
+			sourceTree = "<group>";
+		};
+		159F70ED253014C500AB28F8 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				159F70F3253014C500AB28F8 /* WYPopupBgView.h */,
+				159F70EF253014C500AB28F8 /* WYPopupBgView.m */,
+				159F70EE253014C500AB28F8 /* WYPopupTapStrategy.h */,
+				159F70F1253014C500AB28F8 /* APLPopupTapStrategy.m */,
+				159F70F2253014C500AB28F8 /* WYPopupAnimation.h */,
+				159F70F0253014C500AB28F8 /* APLPopupAnimation.m */,
+				159F70FB2530192700AB28F8 /* WYPopupDemo.h */,
+				159F70FC2530192700AB28F8 /* WYPopupDemo.m */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		159F70F7253016FE00AB28F8 /* ExtensionCommon */ = {
+			isa = PBXGroup;
+			children = (
+				159F70F82530171600AB28F8 /* UIView+Layout.h */,
+				159F70F92530171700AB28F8 /* UIView+Layout.m */,
+			);
+			path = ExtensionCommon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +248,7 @@
 		159F70AC2530147D00AB28F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WY;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = wy;
 				TargetAttributes = {
@@ -269,8 +319,13 @@
 			files = (
 				159F70BF2530147D00AB28F8 /* ViewController.m in Sources */,
 				159F70B92530147D00AB28F8 /* AppDelegate.m in Sources */,
+				159F70F4253014C500AB28F8 /* WYPopupBgView.m in Sources */,
+				159F70F5253014C500AB28F8 /* APLPopupAnimation.m in Sources */,
+				159F70FA2530171700AB28F8 /* UIView+Layout.m in Sources */,
 				159F70CA2530147E00AB28F8 /* main.m in Sources */,
 				159F70BC2530147D00AB28F8 /* SceneDelegate.m in Sources */,
+				159F70FD2530192700AB28F8 /* WYPopupDemo.m in Sources */,
+				159F70F6253014C500AB28F8 /* APLPopupTapStrategy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WYExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WYExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
